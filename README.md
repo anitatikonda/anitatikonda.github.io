@@ -6,7 +6,7 @@ Imagine we write out a list of every possible random number between 0 and 1, and
 For example: \
 1| 0.0000000000....00 \
 2 | 0.0000000000....01 \
-3 | 0.0000000000....02 \
+3 | 0.0000000000....02
 
 This means we would have an infinite collection of numbers with infinite indexes. \
 But **does this set contain ALL possible numbers between 0 and 1**? \
