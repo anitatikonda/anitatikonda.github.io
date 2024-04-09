@@ -10,11 +10,24 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <style>
         /* Basic CSS for the starter website */
-        body {
+        body, html {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
             font-size: 12px;
+        }
+
+        .gif-container {
+            position: absolute; /* Set position to absolute */
+            top: 50%; /* Adjust vertical position */
+            right: 0; /* Align to the right */
+            transform: translateY(-50%); /* Center vertically */
+            z-index: 10; /* Ensure the GIF is on top */
+        }
+
+        .gif-container img {
+            width: 100px; /* Set width of the GIF */
+            height: auto; /* Maintain aspect ratio */
         }
 
         header {
@@ -107,6 +120,14 @@
             bottom: 0;
             width: 100%;
         }
+
+        .visitor-counter {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
     </style>
 </head>
 
@@ -142,6 +163,12 @@
         <p>The ribbon at the top details school experiences, professional experiences, and passion projects.</p>
         <p>For more information on how to contact me, please see the Contact tab.</p>
     </main>
+
+    <div class="visitor-counter">
+        <p>Visitor Count: 
+            <?php include 'visitor_counter.php'; ?>
+        </p>
+    </div>
 
     <footer>
         <p>&copy; 2024. All rights reserved.</p>
