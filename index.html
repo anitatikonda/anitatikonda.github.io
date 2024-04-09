@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ani Tatikonda</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <style>
         /* Basic CSS for the starter website */
         body {
-            font-family: 'Source Code Pro', monospace;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
             font-size: 12px;
@@ -21,14 +22,38 @@
             color: #fff;
             text-align: center;
             padding: 0.75em;
-            display: flex; /* Added for flexbox layout */
-            justify-content: center;
-            align-items: center; /* Added for vertical centering */
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between; /* Add space between the two divs */
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-left {
+             display: flex;
+             align-items: center;
         }
         
         header img {
             width: 45px;
             margin-right: 10px;
+        }
+        h1 {
+            margin: 0;
+        }
+
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Align items to the far right */
+            margin-bottom: 5px;
+        }
+
+        .header-right p {
+            margin-bottom: 5px; /* Adjust the margin-bottom value to reduce spacing */
         }
 
         nav {
@@ -43,6 +68,7 @@
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            font-size: 12px;
         }
 
         nav a img {
@@ -74,18 +100,27 @@
 <body>
 
     <header>
-        <img src="images/ani-t-logo.png" alt="Custom Icon">
-        <h1>Ani Tatikonda: A History</h1>
+        <div class="header-content">
+            <div class="header-left">
+                <img src="images/ani-t-logo.png" alt="Custom Icon">
+                <h1>Ani Tatikonda: A History</h1>
+            </div>
+            <div class="header-right">
+                <p>ani tatikonda at gmail dot com</p>
+                <p>atatikonda 3 at gatech dot edu</p>
+                <p>+1 234 567 8901</p>
+            </div>
+        </div>
     </header>
 
     <nav>
-        <a href="#"><img src="images/home-icon.png">Home</a>
-        <a href="#"><img src="images/lambert-logo.png">Lambert High School</a>
-        <a href="#"><img src="images/gt-logo-3.png"> Georgia Institute of Technology</a>
-        <a href="#">Work Experience</a>
-        <a href="#">Skills</a>
-        <a href="#">Passion Projects</a>
-        <a href="#">Contacts</a>
+        <a href="#"><img src="images/icon-home.png">Home</a>
+        <a href="#"><img src="images/icon-school.png">Lambert High School</a>
+        <a href="#"><img src="images/icon-grad.png">Georgia Institute of Technology</a>
+        <a href="#"><img src="images/icon-work.png">Work Experience</a>
+        <a href="#"><img src="images/icon-skills.png">Skills</a>
+        <a href="#"><img src="images/icon-project-2.png">Passion Projects</a>
+        <a href="#"><img src="images/icon-contact-4.png">Contact</a>
     </nav>
 
     <main>
