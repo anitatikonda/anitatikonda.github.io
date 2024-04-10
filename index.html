@@ -86,6 +86,12 @@
             background-position: center;
         }
 
+        .result-icon {
+            width: 20px;
+            height: auto;
+            margin-right: 10px;
+        }
+
         .search-container {
             float: right;
             margin-top: 10px;
@@ -113,10 +119,16 @@
         }
 
         .search-results {
+            border: 2px solid #333;
+            border-radius: 5px;
+            padding: 15px;
             margin-top: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .search-results h2 {
+            margin-top: 0px;
             margin-bottom: 10px;
         }
 
@@ -239,13 +251,13 @@
         function search() {
             var input = document.getElementById("searchInput").value.toLowerCase();
             var articles = [
-                { title: "Home", content: "Welcome to my portfolio website. This website contains my portfolio work across the years, starting at high school to the present." },
-                { title: "High School", content: "This section showcases my achievements and projects during my high school years. It includes academic achievements, extracurricular activities, and more." },
-                { title: "Institute", content: "In this section, you can find information about my time at the Institute. It includes courses taken, projects completed, and other academic accomplishments." },
-                { title: "Work Experience", content: "This section details my professional experiences, internships, and jobs. It includes roles, responsibilities, achievements, and skills gained." },
-                { title: "Skills", content: "This section highlights my technical skills, soft skills, and other abilities. It includes programming languages, tools, technologies, and certifications." },
-                { title: "Passion Projects", content: "In this section, you can explore my passion projects and personal projects. It includes descriptions, technologies used, and outcomes of each project." },
-                { title: "Contact", content: "For more information on how to contact me, please see the Contact tab. You can reach out to me via email or phone for inquiries, collaborations, or any other questions." }
+                { title: "Home", content: "Welcome to my portfolio website. This website contains my portfolio work across the years, starting at high school to the present.", icon: "images/icon-home-black.png" },
+                { title: "Lambert High School", content: "This section showcases my achievements and projects during my high school years. It includes academic achievements, extracurricular activities, and more.", icon: "images/icon-school-black.png" },
+                { title: "Georgia Institute of Technology", content: "In this section, you can find information about my time at Georgia Tech. It includes courses taken, projects completed, and other academic accomplishments.", icon: "images/icon-school-black.png" },
+                { title: "Work Experience", content: "This section details my professional experiences, internships, and jobs. It includes roles, responsibilities, achievements, and skills gained.", icon: "images/icon-work-black.png" },
+                { title: "Skills", content: "This section highlights my technical skills, soft skills, and other abilities. It includes programming languages, tools, technologies, and certifications.", icon: "images/icon-skills-black.png" },
+                { title: "Passion Projects", content: "In this section, you can explore my passion projects and personal projects. It includes descriptions, technologies used, and outcomes of each project.", icon: "images/icon-project-black.png" },
+                { title: "Contact", content: "For more information on how to contact me, please see the Contact tab. You can reach out to me via email or phone for inquiries, collaborations, or any other questions.", icon: "images/icon-contact-black.png" }
             // Add more articles as needed
             ];
             var searchResults = [];
@@ -260,6 +272,11 @@
         }
 
         function displayResults(results) {
+            var existingResults = document.querySelector(".search-results")
+            if (existingResults) {
+                existingResults.remove()
+            }
+
             var resultsDiv = document.createElement("div");
             resultsDiv.className = "search-results";
 
@@ -275,6 +292,11 @@
                 var ul = document.createElement("ul");
                 results.forEach(function(result) {
                     var li = document.createElement("li");
+                    var icon = document.createElement("img");
+                    icon.src = result.icon;
+                    icon.alt = result.title + " icon";
+                    icon.className = "result-icon";
+                    li.appendChild(icon);
                     var title = document.createElement("h3");
                     title.textContent = result.title;
                     var content = document.createElement("p");
@@ -289,6 +311,12 @@
             var mainContent = document.querySelector("main");
             mainContent.insertBefore(resultsDiv, mainContent.firstChild);
         }
+
+        document.getElementById("searchInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                search(); // Call the search function when "Enter" key is pressed
+            }
+        });
     </script>
 
 </body>
