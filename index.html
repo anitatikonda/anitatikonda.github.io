@@ -30,6 +30,11 @@
             height: auto; /* Maintain aspect ratio */
         }
 
+        p, h1, h2, h3, h4, h5, h6 {
+            margin-left: 20px; /* Add margin to the left side of text */
+            margin-right: 20px; /* Add margin to the right side of text */
+        }
+
         header {
             background-image: url('images/web-banner-3.png');
             background-color: #000;
@@ -123,10 +128,15 @@
         .search-results {
             border: 2px solid #333;
             border-radius: 5px;
-            padding: 15px;
+            padding: 1em; /* Previously 15px */
             margin-top: 20px;
             background-color: #f9f9f9;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .search-results h2 {
@@ -147,6 +157,23 @@
             display: inline;
             vertical-align: middle;
             margin: 0;
+        }
+
+        .search-button, .clear-button {
+            padding: 10px 20px; /* Set padding for the button */
+            margin-top: 20px; /* Add margin to the top of the button */
+            background-color: #333; /* Set background color */
+            color: #fff; /* Set text color */
+            border: none; /* Remove border */
+            border-radius: 3px; /* Add border radius */
+            cursor: pointer; /* Set cursor to pointer */
+            position: absolute; /* Set position to absolute for positioning the button */
+            bottom: 10px; /* Set distance from the bottom */
+            right: 10px; /* Set distance from the right */
+        }
+
+        .search-button:hover, .clear-button:hover {
+            background-color: #555;
         }
 
         nav a {
@@ -226,7 +253,7 @@
     </nav>
 
     <main>
-        <h2>Welcome to my website!</h2>
+        <h2 class = "welcome-text">Welcome to my website!</h2>
         <p>This website contains my portfolio work across the years, starting at high school to the present.</p>
         <p>The ribbon at the top details school experiences, professional experiences, and passion projects.</p>
         <p>For more information on how to contact me, please see the Contact tab. <img src="images/spinning-globe-4.gif" width="100" height="100"></p>
@@ -311,6 +338,14 @@
                 });
                 resultsDiv.appendChild(ul);
             }
+
+            var clearButton = document.createElement("button");
+            clearButton.textContent = "Clear";
+            clearButton.className = "search-button clear-button";
+            clearButton.addEventListener("click", function() {
+                resultsDiv.remove();
+            });
+            resultsDiv.appendChild(clearButton);
 
             var mainContent = document.querySelector("main");
             mainContent.insertBefore(resultsDiv, mainContent.firstChild);
