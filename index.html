@@ -86,6 +86,52 @@
             background-position: center;
         }
 
+        .search-container {
+            float: right;
+            margin-top: 10px;
+        }
+
+        .search-container input[type=text] {
+            padding: 5px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .search-container button {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #555;
+        }
+
+        .search-results {
+            margin-top: 20px;
+        }
+
+        .search-results h2 {
+            margin-bottom: 10px;
+        }
+
+        .search-results ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .search-results li {
+            margin-bottom: 15px;
+        }
+
+        .search-results h3 {
+            margin-bottom: 5px;
+        }
+
         nav a {
             float: left;
             display: block;
@@ -155,6 +201,11 @@
         <a href="#"><img src="images/icon-skills-black.png">Skills</a>
         <a href="#"><img src="images/icon-project-black.png">Passion Projects</a>
         <a href="#"><img src="images/icon-contact-black-2.png">Contact</a>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button type="button" onclick="search()">Search</button>
+        </div>
     </nav>
 
     <main>
@@ -164,32 +215,79 @@
         <p>For more information on how to contact me, please see the Contact tab. <img src="images/spinning-globe-4.gif" width="100" height="100"></p>
     </main>
 
-    <div class="visitor-counter">
-        <p>Visitor Count: <span id="visitorCount">0</span></p>
+    <div class="time-spent">
+        <p>Time Spent on Page: <span id="timeSpent">0 seconds</span></p>
     </div>
 
     <footer>
         <p>&copy; 2024. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript Time Spent Counter -->
     <script>
-        // Check if the visitorCount key exists in localStorage
-        if (localStorage.getItem("visitorCount")) {
-            // If it exists, get the current count
-            var count = parseInt(localStorage.getItem("visitorCount"));
-        } else {
-            // If it doesn't exist, set the count to 0
-            var count = 0;
+        var startTime = new Date().getTime(); // Get the current time when the page is loaded
+
+        setInterval(function() {
+            var currentTime = new Date().getTime(); // Get the current time
+            var timeSpent = (currentTime - startTime) / 1000; // Calculate the time spent in seconds
+            document.getElementById("timeSpent").innerText = timeSpent.toFixed(2) + " seconds"; // Display the time spent
+        }, 1000); // Update the displayed time every 1 second
+    </script>
+
+    <script>
+        function search() {
+            var input = document.getElementById("searchInput").value.toLowerCase();
+            var articles = [
+                { title: "Home", content: "Welcome to my portfolio website. This website contains my portfolio work across the years, starting at high school to the present." },
+                { title: "High School", content: "This section showcases my achievements and projects during my high school years. It includes academic achievements, extracurricular activities, and more." },
+                { title: "Institute", content: "In this section, you can find information about my time at the Institute. It includes courses taken, projects completed, and other academic accomplishments." },
+                { title: "Work Experience", content: "This section details my professional experiences, internships, and jobs. It includes roles, responsibilities, achievements, and skills gained." },
+                { title: "Skills", content: "This section highlights my technical skills, soft skills, and other abilities. It includes programming languages, tools, technologies, and certifications." },
+                { title: "Passion Projects", content: "In this section, you can explore my passion projects and personal projects. It includes descriptions, technologies used, and outcomes of each project." },
+                { title: "Contact", content: "For more information on how to contact me, please see the Contact tab. You can reach out to me via email or phone for inquiries, collaborations, or any other questions." }
+            // Add more articles as needed
+            ];
+            var searchResults = [];
+
+            articles.forEach(function(article) {
+                if (article.title.toLowerCase().includes(input) || article.content.toLowerCase().includes(input)) {
+                searchResults.push(article);
+                }
+            });
+
+            displayResults(searchResults);
         }
 
-        // Increment the count
-        count++;
+        function displayResults(results) {
+            var resultsDiv = document.createElement("div");
+            resultsDiv.className = "search-results";
 
-        // Update the visitorCount in localStorage
-        localStorage.setItem("visitorCount", count);
+            var heading = document.createElement("h2");
+            heading.textContent = "Search Results";
+            resultsDiv.appendChild(heading);
 
-        // Display the count
-        document.getElementById("visitorCount").innerText = count;
+            if (results.length === 0) {
+                var noResults = document.createElement("p");
+                noResults.textContent = "No results found.";
+                resultsDiv.appendChild(noResults);
+            } else {
+                var ul = document.createElement("ul");
+                results.forEach(function(result) {
+                    var li = document.createElement("li");
+                    var title = document.createElement("h3");
+                    title.textContent = result.title;
+                    var content = document.createElement("p");
+                    content.textContent = result.content;
+                    li.appendChild(title);
+                    li.appendChild(content);
+                    ul.appendChild(li);
+                });
+                resultsDiv.appendChild(ul);
+            }
+
+            var mainContent = document.querySelector("main");
+            mainContent.insertBefore(resultsDiv, mainContent.firstChild);
+        }
     </script>
 
 </body>
