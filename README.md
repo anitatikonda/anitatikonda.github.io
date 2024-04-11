@@ -1,4 +1,4 @@
-# Ani Tatikonda: An Introduction
+# anitatikonda: An Introduction
 
 **Name:** Anirudh Tatikonda
 
@@ -14,5 +14,5 @@ This repository contains my portfolio work across the years, starting at high sc
 
 **Github Page Status:** Currently Editing
 
-**Last Time of Edit:** ![#0000ff](10:40 PM EST, Wed Apr 10, 2024)
+**Last Time of Edit:** ![#0000ff](10:41 PM EST, Wed Apr 10, 2024)
 
