@@ -91,6 +91,32 @@
             width: 100%;
         }
 
+        nav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        nav a:hover {
+            background-color: rgba(215, 220, 222, 0.5); /* Transparent hover color */
+        }
+
+        nav a img {
+            width: 15px; /* Reduced width of the custom icon/image */
+            height: auto;
+            margin-right: 5px; /* Add some spacing between the icon/image and text */
+        }
+
+        nav a:hover {
+            background-color: #cad4d8;
+        }
+
         .result-icon {
             width: 20px;
             height: auto;
@@ -174,27 +200,6 @@
 
         .search-button:hover, .clear-button:hover {
             background-color: #555;
-        }
-
-        nav a {
-            float: left;
-            display: block;
-            color: black;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        nav a img {
-            width: 15px; /* Reduced width of the custom icon/image */
-            height: auto;
-            margin-right: 5px; /* Add some spacing between the icon/image and text */
-        }
-
-        nav a:hover {
-            background-color: #d7dcde;
         }
 
         main {
