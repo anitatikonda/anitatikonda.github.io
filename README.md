@@ -1,15 +1,18 @@
-## Cantor's Diagonal Argument
+# Ani Tatikonda: An Introduction
 
-`Central Idea` \
-What has more numbers? The set of rational numbers between $`[0, 1]`$, or the number of natural numbers beginning at 0 and expanding to $`\infty`$?
+**Name:** Anirudh Tatikonda
 
-Imagine we write out a list of every possible random number between 0 and 1, and each number would have its own special index. \
-For example: \
-$`1 \text{ } | \text{ } 0.0000000000....00`$ \
-2 | 0.0000000000....01 \
-3 | 0.0000000000....02
+**Birth Place:** Chicago, IL
 
-This means we would have an infinite collection of numbers with infinite indexes. \
-But **does this set contain ALL possible numbers between 0 and 1**? \
+**Birth Date:** March 30th, 2003
 
-There is no one-to-one correspondence between the numbers between 0 and
+**Hobbies:** Archery, Fencing, Tennis, Movies, Video Games, YouTube Content Creation
+
+This repository contains my portfolio work across the years, starting at high school to the present. For more information, see the link to my website below.
+
+[Click to view my Portfolio](https://anitatikonda.github.io)
+
+**Github Page Status:** Currently Editing
+
+**Last Time of Edit:** ![#0000ff](10:40 PM EST, Wed Apr 10, 2024)
+
