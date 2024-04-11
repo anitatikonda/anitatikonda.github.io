@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ani Tatikonda</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon-7.ico" type="image/x-icon">
     <style>
@@ -67,7 +66,7 @@
         h1 {
             margin: 0;
             font-weight: 700;
-            font-family: 'Architects Daughter', cursive;
+            font-family: 'Architects Daughter', cursive; /* Hammersmith One is also good */
             font-size: 3em;
         }
 
@@ -261,7 +260,7 @@
     </main>
 
     <div class="time-spent">
-        <p>Time Spent on Page: <span id="timeSpent">0 seconds</span></p>
+        <p>Time Spent on Page: <span id="timeSpent">0s</span></p>
     </div>
 
     <!-- JavaScript Time Spent Counter -->
@@ -271,7 +270,7 @@
         setInterval(function() {
             var currentTime = new Date().getTime(); // Get the current time
             var timeSpent = (currentTime - startTime) / 1000; // Calculate the time spent in seconds
-            document.getElementById("timeSpent").innerText = timeSpent.toFixed(2) + " seconds"; // Display the time spent
+            document.getElementById("timeSpent").innerText = timeSpent.toFixed(0) + "s"; // Display the time spent
         }, 1000); // Update the displayed time every 1 second
     </script>
 

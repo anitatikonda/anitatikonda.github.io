@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ani Tatikonda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-7.ico" type="image/x-icon">
+    <style>
+        /* Basic CSS for the starter website */
+        body, html {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        .gif-container {
+            position: absolute; /* Set position to absolute */
+            top: 50%; /* Adjust vertical position */
+            right: 0; /* Align to the right */
+            transform: translateY(-50%); /* Center vertically */
+            z-index: 10; /* Ensure the GIF is on top */
+        }
+
+        .gif-container img {
+            width: 100px; /* Set width of the GIF */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        p, h1, h2, h3, h4, h5, h6 {
+            margin-left: 20px; /* Add margin to the left side of text */
+            margin-right: 20px; /* Add margin to the right side of text */
+        }
+
+        header {
+            background-image: url('images/web-banner-3.png');
+            background-color: #001e3a;
+            color: #fff;
+            text-align: center;
+            padding: 0.75em;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between; /* Add space between the two divs */
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-left {
+             display: flex;
+             align-items: center;
+        }
+        
+        header img {
+            width: 45px;
+            margin-right: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-weight: 700;
+            font-family: 'Architects Daughter', cursive; /* Hammersmith One is also good */
+            font-size: 3em;
+        }
+
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Align items to the far right */
+            margin-bottom: 5px;
+        }
+
+        .header-right p {
+            margin-bottom: 5px; /* Adjust the margin-bottom value to reduce spacing */
+        }
+
+        nav {
+            background-image: url('images/nav-banner-2.png');
+            background-color: #ededed;
+            overflow: hidden;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+
+        .result-icon {
+            width: 20px;
+            height: auto;
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .search-container {
+            float: right;
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+        .search-container input[type=text] {
+            padding: 5px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .search-container button {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #555;
+        }
+
+        .search-results {
+            border: 2px solid #333;
+            border-radius: 5px;
+            padding: 1em; /* Previously 15px */
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-results h2 {
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        .search-results ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .search-results li {
+            margin-bottom: 15px;
+        }
+
+        .search-results h3 {
+            display: inline;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        .search-button, .clear-button {
+            padding: 5px 10px; /* Set padding for the button */
+            margin-top: 20px; /* Add margin to the top of the button */
+            background-color: #333; /* Set background color */
+            color: #fff; /* Set text color */
+            border: none; /* Remove border */
+            border-radius: 3px; /* Add border radius */
+            cursor: pointer; /* Set cursor to pointer */
+            position: absolute; /* Set position to absolute for positioning the button */
+            bottom: 10px; /* Set distance from the bottom */
+            right: 10px; /* Set distance from the right */
+        }
+
+        .search-button:hover, .clear-button:hover {
+            background-color: #555;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        nav a img {
+            width: 15px; /* Reduced width of the custom icon/image */
+            height: auto;
+            margin-right: 10px; /* Add some spacing between the icon/image and text */
+        }
+
+        nav a:hover {
+            background-color: #d7dcde;
+        }
+
+        main {
+            padding: 1em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 0em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .visitor-counter {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <img src="images/icon-crown.png" alt="Custom Icon">
+                <h1>Ani Tatikonda's Portfolio</h1>
+            </div>
+            <div class="header-right">
+                <p>anitatikonda@gmail.com</p>
+                <p>atatikonda3@gatech.edu</p>
+                <p>+1 (678) 617-2892</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html"><img src="images/icon-home-black.png">Home</a>
+        <a href="school.html"><img src="images/icon-school-black.png">Lambert High School</a>
+        <a href="grad.html"><img src="images/icon-grad-black.png">Georgia Institute of Technology</a>
+        <a href="work.html"><img src="images/icon-work-black.png">Work Experience</a>
+        <a href="skills.html"><img src="images/icon-skills-black.png">Skills</a>
+        <a href="projects.html"><img src="images/icon-project-black.png">Passion Projects</a>
+        <a href="contacts.html"><img src="images/icon-contact-black-2.png">Contact</a>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button type="button" onclick="search()">Search</button>
+        </div>
+    </nav>
+
+    <main>
+        <h2 class = "welcome-text">Contact</h2>
+        <p>For more information on how to contact me, please see the Contact tab. You can reach out to me via email or phone for inquiries, collaborations, or any other questions.</p>
+    </main>
+
+    <div class="time-spent">
+        <p>Time Spent on Page: <span id="timeSpent">0s</span></p>
+    </div>
+
+    <!-- JavaScript Time Spent Counter -->
+    <script>
+        var startTime = new Date().getTime(); // Get the current time when the page is loaded
+
+        setInterval(function() {
+            var currentTime = new Date().getTime(); // Get the current time
+            var timeSpent = (currentTime - startTime) / 1000; // Calculate the time spent in seconds
+            document.getElementById("timeSpent").innerText = timeSpent.toFixed(0) + "s"; // Display the time spent
+        }, 1000); // Update the displayed time every 1 second
+    </script>
+
+    <script>
+        function search() {
+            var input = document.getElementById("searchInput").value.toLowerCase();
+            var articles = [
+                { title: "Home", content: "Welcome to my portfolio website. This website contains my portfolio work across the years, starting at high school to the present.", icon: "images/icon-home-black.png" },
+                { title: "Lambert High School", content: "This section showcases my achievements and projects during my high school years. It includes academic achievements, extracurricular activities, and more.", icon: "images/icon-school-black.png" },
+                { title: "Georgia Institute of Technology", content: "In this section, you can find information about my time at Georgia Tech. It includes courses taken, projects completed, and other academic accomplishments.", icon: "images/icon-school-black.png" },
+                { title: "Work Experience", content: "This section details my professional experiences, internships, and jobs. It includes roles, responsibilities, achievements, and skills gained.", icon: "images/icon-work-black.png" },
+                { title: "Skills", content: "This section highlights my technical skills, soft skills, and other abilities. It includes programming languages, tools, technologies, and certifications.", icon: "images/icon-skills-black.png" },
+                { title: "Passion Projects", content: "In this section, you can explore my passion projects and personal projects. It includes descriptions, technologies used, and outcomes of each project.", icon: "images/icon-project-black.png" },
+                { title: "Contact", content: "For more information on how to contact me, please see the Contact tab. You can reach out to me via email or phone for inquiries, collaborations, or any other questions.", icon: "images/icon-contact-black.png" }
+            // Add more articles as needed
+            ];
+            var searchResults = [];
+
+            articles.forEach(function(article) {
+                if (article.title.toLowerCase().includes(input) || article.content.toLowerCase().includes(input)) {
+                searchResults.push(article);
+                }
+            });
+
+            displayResults(searchResults);
+        }
+
+        function displayResults(results) {
+            var existingResults = document.querySelector(".search-results")
+            if (existingResults) {
+                existingResults.remove()
+            }
+
+            var resultsDiv = document.createElement("div");
+            resultsDiv.className = "search-results";
+
+            var heading = document.createElement("h2");
+            heading.textContent = "Search Results";
+            resultsDiv.appendChild(heading);
+
+            if (results.length === 0) {
+                var noResults = document.createElement("p");
+                noResults.textContent = "No results found.";
+                resultsDiv.appendChild(noResults);
+            } else {
+                var ul = document.createElement("ul");
+                results.forEach(function(result) {
+                    var li = document.createElement("li");
+                    var icon = document.createElement("img");
+                    icon.src = result.icon;
+                    icon.alt = result.title + " icon";
+                    icon.className = "result-icon";
+                    li.appendChild(icon);
+                    var title = document.createElement("h3");
+                    title.textContent = result.title;
+                    var content = document.createElement("p");
+                    content.textContent = result.content;
+                    li.appendChild(title);
+                    li.appendChild(content);
+                    ul.appendChild(li);
+                });
+                resultsDiv.appendChild(ul);
+            }
+
+            var clearButton = document.createElement("button");
+            clearButton.textContent = "Close";
+            clearButton.className = "search-button clear-button";
+            clearButton.addEventListener("click", function() {
+                resultsDiv.remove();
+            });
+            resultsDiv.appendChild(clearButton);
+
+            var mainContent = document.querySelector("main");
+            mainContent.insertBefore(resultsDiv, mainContent.firstChild);
+        }
+
+        document.getElementById("searchInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                search(); // Call the search function when "Enter" key is pressed
+            }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; Ani Tatikonda 2024. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
