@@ -14,6 +14,48 @@
             margin: 0;
             padding: 0;
             font-size: 12px;
+            overflow-x: hidden;
+            overscroll-behavior: none;
+        }
+
+        #calendar {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        #calendar table {
+            width: 100%;
+        }
+        #calendar th,
+        #calendar td {
+            text-align: center;
+            padding: 5px;
+        }
+        #calendar th {
+            background-color: #f2f2f2;
+        }
+        #calendar td {
+            cursor: pointer;
+        }
+        #calendar td.today {
+            background-color: #ffcccc;
+        }
+        #calendar td.event {
+            background-color: #ffff99;
+            font-weight: bold;
+        }
+
+        .custom-calendar {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+
+        .custom-calendar #calendar {
+            background-color: #f5f5f5 !important;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .gif-container {
@@ -43,6 +85,10 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            overflow-x: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .header-content {
@@ -88,7 +134,8 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            width: 100%;
+            overflow-x: hidden;
+            position: sticky;
         }
 
         nav a {
@@ -204,6 +251,8 @@
 
         main {
             padding: 1em;
+            position: relative;
+            width: 100%;
         }
 
         footer {
@@ -211,9 +260,10 @@
             color: #fff;
             text-align: center;
             padding: 0em;
-            position: fixed;
+            position: relative;
             bottom: 0;
             width: 100%;
+            overflow-x: hidden;
         }
 
         .visitor-counter {
@@ -265,31 +315,10 @@
         <p>Institution email: atatikonda3@gatech.edu</p>
         <p>Phone (least preferred): +1 (678) 617-2892</p>
         <h3>Full Availability:</h3>
-        <ul style="list-style-type:square;">
-            <li>Monday</li>
-            <ul>
-                <li>11 am - 12 pm</li>
-                <li>2 pm - 3 pm</li>
-            </ul>
-            <li>Tuesday</li>
-            <ul>
-                <li>11 am - 5 pm</li>
-            </ul>
-            <li>Wednesday</li>
-            <ul>
-                <li>2 pm - 3 pm</li>
-            </ul>
-            <li>Thursday</li>
-            <ul>
-                <li>11 am - 5 pm</li>
-            </ul>
-            <li>Friday</li>
-            <ul>
-                <li>10 am - 3 pm</li>
-            </ul>
-          </ul>
-          <h3>Schedule an Appointment:</h3>
+        <iframe src="https://calendar.google.com/calendar/embed?src=9b25b09960ad130c6073905e8814b4063b309e6e314a3929e2103db3e026c781%40group.calendar.google.com&ctz=America%2FNew_York" style="border-width: 0; width: 800px; height: 600px; background-color: #f5f5f5; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);" frameborder="0" scrolling="no"></iframe>
     </main>
+
+    <div id = "calendar"></div>
 
     <div class="time-spent">
         <p>Time Spent on Page: <span id="timeSpent">0m 0s</span></p>
@@ -388,6 +417,61 @@
                 search(); // Call the search function when "Enter" key is pressed
             }
         });
+
+        // Event data
+        var events = [
+            { date: '2024-04-15', description: 'Meeting with client' },
+            { date: '2024-04-20', description: 'Team lunch' },
+            // Add more events here
+        ];
+
+        // Function to generate calendar with events
+        function generateCalendar() {
+            var calendar = document.getElementById('calendar');
+            var currentDate = new Date();
+            var currentMonth = currentDate.getMonth();
+            var currentYear = currentDate.getFullYear();
+            
+            var daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+            var firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
+            
+            var table = '<table>';
+            table += '<tr><th colspan="7">' + currentDate.toLocaleString('default', { month: 'long', year: 'numeric' }) + '</th></tr>';
+            table += '<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>';
+            
+            var day = 1;
+            for (var i = 0; i < 6; i++) {
+                table += '<tr>';
+                for (var j = 0; j < 7; j++) {
+                    if ((i === 0 && j < firstDayOfMonth) || day > daysInMonth) {
+                        table += '<td></td>';
+                    } else {
+                        var className = '';
+                        var event = events.find(e => e.date === formatDate(currentYear, currentMonth + 1, day));
+                        if (event) {
+                            className = 'event';
+                        }
+                        table += '<td class="' + className + '">' + day + '</td>';
+                        day++;
+                    }
+                }
+                table += '</tr>';
+                if (day > daysInMonth) {
+                    break;
+                }
+            }
+            table += '</table>';
+            
+            calendar.innerHTML = table;
+        }
+
+        // Function to format date
+        function formatDate(year, month, day) {
+            return year + '-' + String(month).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+        }
+
+        // Call the function to generate calendar with events
+        generateCalendar();
     </script>
 
     <footer>

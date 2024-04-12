@@ -275,7 +275,7 @@
     </main>
 
     <div class="time-spent">
-        <p>Time Spent on Page: <span id="timeSpent">0s</span></p>
+        <p>Time Spent on Page: <span id="timeSpent">0m 0s</span></p>
     </div>
 
     <!-- JavaScript Time Spent Counter -->
@@ -285,7 +285,11 @@
         setInterval(function() {
             var currentTime = new Date().getTime(); // Get the current time
             var timeSpent = (currentTime - startTime) / 1000; // Calculate the time spent in seconds
-            document.getElementById("timeSpent").innerText = timeSpent.toFixed(0) + "s"; // Display the time spent
+            if ((timeSpent % 60).toFixed(0) == 60) {
+                document.getElementById("timeSpent").innerText = Math.ceil(timeSpent / 60).toFixed(0) + "m " + 0 + "s"; // Display the time spent
+            } else {
+                document.getElementById("timeSpent").innerText = Math.floor(timeSpent / 60).toFixed(0) + "m " + (timeSpent % 60).toFixed(0) + "s"; // Display the time spent in min + sec
+            }
         }, 1000); // Update the displayed time every 1 second
     </script>
 
