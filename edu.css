@@ -1,0 +1,479 @@
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin-left: 20px; /* Add margin to the left side of text */
+    margin-right: 20px; /* Add margin to the right side of text */
+}
+
+/* ==== GENERAL HEADER ------------------------------ */
+
+header {
+    background-image: url('images/black.png');
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 0.75em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Add space between the two divs */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-left {
+     display: flex;
+     align-items: center;
+}
+
+header img {
+    width: 45px;
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    font-size: 2.3em;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the far right */
+    margin-bottom: 5px;
+}
+
+.header-right p {
+    margin-bottom: 5px; /* Adjust the margin-bottom value to reduce spacing */
+}
+
+/* ==== NAV BAR ------------------------------ */
+
+nav {
+    background-image: url('images/gold-4.png');
+    background-color: #eed492;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+    position: sticky;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav a img {
+    width: 15px; /* Reduced width of the custom icon/image */
+    height: auto;
+    margin-right: 5px; /* Add some spacing between the icon/image and text */
+}
+
+nav a:hover {
+    background-color: #cad4d8;
+}
+
+nav a.active {
+    border: 2.5px solid #000; /* Black border */
+    padding: 5px 10px; /* Add padding to create space between text and border */
+    border-radius: 4px; /* Optional: Rounded corners for the border */
+    color: #000; /* Optional: Change the text color */
+    font-weight: bold; /* Optional: Make the text bold */
+    background-color: #eed492; /* Optional: Background color to highlight the link */
+    margin-top: 6px; /* Adjust as needed */
+}
+
+/* ==== SOCIALS ------------------------------ */
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-icons p {
+    margin: 5px 0;
+    color: #eed492;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.social-icons p:hover {
+    text-decoration: underline;
+}
+
+.social-icons p img.social-icon {
+    width: 20px; /* Adjust the size as needed */
+    height: auto;
+    margin-left: 12px;
+}
+
+/* ==== HEADER SEARCH BAR ------------------------------ */
+
+.result-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.search-container {
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+#search-results-container {
+    position: absolute;
+    top: 0; /* Adjust as needed */
+    left: 0;
+    right: 0;
+    z-index: 1001; /* Make sure it's above the hero image */
+}
+
+.search-container input[type=text] {
+    padding: 5px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    background-color: #1d1d1d; /* previously #333 */
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #555;
+}
+
+.search-results {
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 1em; /* Previously 15px */
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style adjustments for the search results */
+.search-results {
+    position: relative; /* Ensure it's positioned within its container */
+    z-index: 1002; /* Ensure it's on top */
+    margin: 20px auto; /* Center and add spacing as needed */
+    max-width: 800px; /* Adjust width as needed */
+}
+
+.search-results h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.search-results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.search-results li {
+    margin-bottom: 15px;
+}
+
+.search-results h3 {
+    display: inline;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.search-button, .clear-button {
+    padding: 5px 10px; /* Set padding for the button */
+    margin-top: 20px; /* Add margin to the top of the button */
+    background-color: #333; /* Set background color */
+    color: #fff; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 3px; /* Add border radius */
+    cursor: pointer; /* Set cursor to pointer */
+    position: absolute; /* Set position to absolute for positioning the button */
+    bottom: 10px; /* Set distance from the bottom */
+    right: 10px; /* Set distance from the right */
+}
+
+.search-button:hover, .clear-button:hover {
+    background-color: #555;
+}
+
+.search-icon {
+    width: 12px;
+    height: 12px;
+}
+
+/* ==== MAIN TEXT ------------------------------ */
+
+main {
+    padding: 1em;
+    position: relative;
+    width: 100%;
+}
+
+/* ==== HERO IMAGE (BASE) ------------------------------ */
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text {
+    position: absolute; /* Important */
+    top: 50%; /* Important */
+    left: 50%; /* Important */
+    transform: translate(-50%, -50%); /* Important */
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    width: auto;
+    max-width: none;
+    margin: 0 auto;
+}
+
+/* ==== GEORGIA TECH IMAGE ------------------------------ */
+
+/* Background image */
+.hero-image-gt {
+    height: 700px;
+}
+
+/* Heading */
+.hero-image-gt .hero-text h1 {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    transform: translate(0%, -50%);
+    text-align: left;
+}
+
+.hero-image-gt .hero-text p {
+    color: #e8e8e8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75em;
+    text-align: left;
+    transform: translate(0%, -50%);
+}
+
+/* Currently using */
+.hero-image-gt .hero-text-gt p {
+    color: black;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 0.75em;
+    text-align: left;
+}
+
+.hero-text-gt h1 {
+    display: flex;
+    align-items: center;
+    font-size: 3em;
+    color: blue;
+    margin: 0; /* Remove default margins */
+}
+
+.hero-text-gt h1 img {
+    width: 200px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 0; /* Remove any margin */
+}
+
+/* ==== HERO IMAGE (CLASS 3) ------------------------------ */
+
+/* NEW */
+.hero-text-3 h1 {
+    display: flex;
+    align-items: center;
+    font-size: 3em;
+    color: black;
+    margin: 0; /* Remove default margins */
+}
+
+/* NEW */
+.hero-text-3 h1 img {
+    width: 200px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 0; /* Remove any margin */
+}
+
+.hero-image-3 {
+    height: 600px
+}
+
+.hero-image-3 .hero-text img {
+    width: 200px;
+    height: auto;
+    /* margin-right: 0; */
+}
+
+.hero-image-3 .hero-text h1 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75em;
+    transform: translate(0%, -100%);
+    /* align-items: center;
+    text-align: left; */
+}
+
+.hero-image-3 .hero-text p {
+    color: white;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.75em;
+}
+
+/* ==== FOOTER ------------------------------ */
+
+footer {
+    background-image: url('images/black.png');
+    background-color: #333;
+    color: #eed492;
+    text-align: center;
+    /* padding: 1em 0; /* Adjust padding to accommodate new content */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* ==== COUNTER ------------------------------ */
+
+.visitor-counter {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.time-spent {
+    margin-top: 10px; /* Adjust margin if needed */
+    font-size: 12px;
+    color: #eed492; /* Ensure the text color is readable */
+}
+
+/* ==== ARCHIVES ------------------------------ */
+
+.gif-container {
+    position: absolute; /* Set position to absolute */
+    top: 50%; /* Adjust vertical position */
+    right: 0; /* Align to the right */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 10; /* Ensure the GIF is on top */
+}
+
+.gif-container img {
+    width: 100px; /* Set width of the GIF */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+    /* Styles for devices with a width up to 768px */
+    .header-content {
+        flex-direction: column;
+    }
+    .hero-text {
+        font-size: 1.5em;
+    }
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.mobile-nav {
+    display: none;
+}
+.menu-toggle {
+    display: block;
+}
+@media (max-width: 768px) {
+    .mobile-nav {
+        display: block;
+    }
+}
+
+button, a {
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+/* .hero-image-1 {
+    height: 450px; /* Set a specific height for the first hero image */
+/* } */
+
+/* .hero-text h1 {
+    margin: 0;
+} */
+
+/* New styles for the first hero section */
+/* .hero-image-1 .hero-text h1 {
+    font-family: 'Architects Daughter';
+    font-size: 3em;
+    color: white;
+}
+
+.hero-image-1 .hero-text p {
+    font-size: 1.2em;
+    color: white;
+} */

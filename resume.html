@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ani Tatikonda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-18.ico" type="image/x-icon">
+    <link rel="stylesheet" href="resume.css">
+</head>
+
+<body>
+
+    <!-- ==== HEADER ------------------------------ -->
+
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <img src="images/golden-leaf.png" alt="Custom Icon">
+                <h1>Ani Tatikonda</h1> 
+                <p style = "font-style: italic; font-size: 18px; color: #eed492; margin-left: 50px; margin-bottom: 10px;">Engineer, explorer, enthusiast.</p>
+            </div>
+            <div class="header-right">
+                <div class="social-icons">
+                    <p id="linkedin-icon">
+                        Let's connect! <img src="images/linked-in.png" alt="LinkedIn Icon" class="social-icon">
+                    </p>
+                    <p id="github-icon">
+                        Like the projects? <img src="images/github-gold.png" alt="GitHub Icon" class="social-icon">
+                    </p>
+                    <p id="email-icon">
+                        Feel free to reach out! <img src="images/plane-gold.png" alt="Email Icon" class="social-icon">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==== NAV BAR ------------------------------ -->
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="edu.html">Education</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="spotlight.html">Spotlight</a>
+        <a href="contact.html">Contact</a>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button type="button" onclick="search()"><img src = 'images/magnifying-glass-2.png' class = 'search-icon'></button>
+        </div>
+    </nav>
+
+    <!-- ==== RESUME ------------------------------ -->
+
+    <div id="search-results-container"></div>
+    
+    <main class = 'resume-background'>
+        <div class = 'resume-container'>
+            <div class = 'resume-left'>
+                <!-- Contact Section -->
+                <section>
+                    <div class = 'container'>
+                        <h2>Contact Information</h2>
+                    </div>
+                    <div class="contact-container">
+                        <p><img src='images/myself-circle-4.png' width="200px" height="200px"></p>
+                        <div class="contact-details">
+                            <p><span class="contact-label">NAME:</span>Ani Tatikonda</p>
+                            <p><span class="contact-label">EMAIL:</span> <a href="mailto:anitatikonda@gmail.com">anitatikonda@gmail.com</a></p>
+                            <p><span class="contact-label">PHONE:</span>+1 (678) 617-2892</p>
+                            <p><span class="contact-label">LINKEDIN:</span> <a href="https://linkedin.com/in/ani-t" target="_blank">linkedin.com/in/ani-t</a></p>
+                            <p><span class="contact-label">GITHUB:</span> <a href="https://github.com/anitatikonda" target="_blank">github.com/anitatikonda</a></p>
+                        </div>
+                    </div>
+                </section>
+
+        <!-- Education Section -->
+        <section class = 'education'>
+            <h2>Education</h2>
+            <div class = 'timeline'>
+                <div class = 'timeline-item'>
+                    <div class = 'timeline-line'></div>
+                    <div class = 'timeline-dot'></div>
+                    <div class = 'timeline-content'>
+                        <h3>BACHELOR OF SCIENCE IN INDUSTRIAL & SYSTEMS ENGINEERING</h3>
+                        <p class = 'info'>
+                            <span class = 'info-item'>Georgia Institute of Technology</span>
+                            <span class = 'info-item'>Spring 2025</span>
+                        </p>
+                        <p class="custom-text">
+                            <span class="custom-item">➣ GPA 3.80/4.00</span>
+                        </p>
+                        <p class="custom-text">
+                            <span class="custom-item">➣ Dean's List for 5 consecutive semesters</span>
+                        </p>
+                        <p>State Lieutenant Governor for Georgia Circle K (Volunteering), CreateX Startup, IISE, Yellow Jacket Fencing, Yellow Jacket Archery</p>
+                    </div>
+                </div>
+                <div class = 'timeline-item'>
+                    <div class = 'timeline-line'></div>
+                    <div class = 'timeline-dot'></div>
+                    <div class = 'timeline-content'>
+                        <h3>MINOR IN MICROECONOMICS OF STRATEGIC ANALYSIS (MESA)</h3>
+                        <p class = 'info'>
+                            <span class = 'info-item'>Georgia Institute of Technology</span>
+                            <span class = 'info-item'>Spring 2025</span>
+                        </p>
+                        <p class="custom-text">
+                            <span class="custom-item">➣ GPA 4.00/4.00</span>
+                        </p>
+                    </div>
+                </div>
+                <div class = 'timeline-item'>
+                    <div class = 'timeline-line'></div>
+                    <div class = 'timeline-dot'></div>
+                    <div class = 'timeline-content'>
+                        <h3>HIGH SCHOOL DIPLOMA</h3>
+                        <p class = 'info'>
+                            <span class = 'info-item'>Lambert High School</span>
+                            <span class = 'info-item'>Spring 2021</span>
+                        </p>
+                        <p class="custom-text">
+                            <span class="custom-item">➣ GPA 4.43</span>
+                        </p>
+                        <p class="custom-text">
+                            <span class="custom-item">➣ Summa Cum Laude</span>
+                        </p>
+                        <p>5 National Honor Societies, 14 AP Courses, 1520 SAT, 23 SAT Essay</p>
+                        <p>National Runner-Up for FBLA, Varsity Fencing, State Finisher for Science Olympiad</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Study Abroad Section -->
+        <section class = 'study-abroad'>
+            <h2>Study Abroad</h2>
+            <div class = 'timeline'>
+                <div class = 'timeline-item'>
+                    <div class="timeline-square"></div>
+                    <div class = 'timeline-content'>
+                        <h3>IRELAND STUDY ABROAD PROGRAM</h3>
+                        <p class="custom-text">
+                            <span class="custom-item-2">Dublin, Ireland</span>
+                        </p>
+                        <p class = 'info'>
+                            <span class="info-item">University College Dublin / Georgia Tech</span>
+                            <span class = 'info-item'>May 2022 - August 2022</span>
+                        </p>
+                        <p class="custom-text">
+                            <span class="custom-item">➣ GPA 4.00/4.00</span>
+                        </p>
+                        <p>Experienced diverse cultures in London, Amsterdam, Rome, Milan, Brussels, Edinburgh, Belfast, and Dublin.</p>
+                        <p>Excelled in courses on European Human Rights, European Fiction, Probability Applications, & Statistics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class = 'experience'>
+            <h2>Experience</h2>
+            <div class = 'timeline'>
+                <div class = 'timeline-item'>
+                    <div class = 'timeline-line'></div>
+                    <div class = 'timeline-dot'></div>
+                    <div class = 'timeline-content'>
+                        <h3>MANAGEMENT CONSULTANT</h3>
+                        <p class="custom-text">
+                            <span class="custom-item-2">CapTech Consulting</span>
+                        </p>
+                        <p class = 'info'>
+                            <span class = 'info-item'>Richmond, VA</span>
+                            <span class = 'info-item'>On-Site</span>
+                            <span class = 'info-item'>May 2024 - August 2024</span>
+                        </p>
+                        <ul>
+                            <li>Led dynamic team of 12 consultants (Data/Analytics, Systems Integration, & Customer Experience teams)</li>
+                        </ul>
+                        <ul>
+                            <li>Managed E2E developments of website, ETL pipeline, Power BI dashboard, AWS securities, & AI chatbot</li>
+                        </ul>
+                        <ul>
+                            <li>Integrated Agile strategies, led 15 client meetings, & oversaw 70+ team meetings to exceed deliverables</li>
+                        </ul>
+                        <ul>
+                            <li>Developed 2 holistic membership initiatives, 6 change acceleration assets, & 3 product roadmaps</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class = 'timeline-item'>
+                    <div class = 'timeline-line'></div>
+                    <div class = 'timeline-dot'></div>
+                    <div class = 'timeline-content'>
+                        <h3>DATA SCIENTIST & CONSULTANT</h3>
+                        <p class="custom-text">
+                            <span class="custom-item-2">United Airlines</span>
+                        </p>
+                        <p class = 'info'>
+                            <span class = 'info-item'>Chicago, IL</span>
+                            <span class = 'info-item'>On-Site</span>
+                            <span class = 'info-item'>January 2023 - June 2023</span>
+                        </p>
+                        <h4>PROJECT 1 — JET BOARDING PROCESS IMPROVEMENT</h4>
+                        <ul>
+                            <li>Championed the addition of United Boarding Group 6 that has expedited passenger boarding by 22%</li>
+                        </ul>
+                        <ul>
+                            <li>Empowered KPIs & restored pre-COVID performance insights quality by way of extensive data acquisition</li>
+                        </ul>
+                        <ul>
+                            <li>Developed a Microsoft Power Apps tool to enable 7 airport hubs to facilitate 400+ critical observations</li>
+                        </ul>
+                        <ul>
+                            <li>Validated best passenger boarding sequence (Window, Middle, Aisle) by hypothesis testing at 70 gates</li>
+                        </ul>
+                        <ul>
+                            <li>Reduced risk of delayed aircraft departures by eliminating over 95% of catering cart delays/inefficiencies</li>
+                        </ul>
+                        <h4>PROJECT 2 — AIRPLANE PARTS MAINTENANCE & DELIVERY OPTIMIZATION</h4>
+                        <ul>
+                            <li>Engaged with 20+ clients (6 departments) to capture full network, identify bottlenecks, & seek priorities</li>
+                        </ul>
+                        <ul>
+                            <li>Applied Microsoft Visio software to route airplane parts decisions, network flow, & department overlaps</li>
+                        </ul>
+                        <ul>
+                            <li>Detected 8 system opportunities & assembled 3 key Kaizen root-cause analyses to prep Tech Ops teams</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+            </div>
+
+            <div class = 'resume-right'>
+                <!-- Projects Section -->
+                <section class="projects">
+                    <h2>Projects</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class = 'timeline-line'></div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>INTERVENTIONAL RADIOLOGY PATIENT PROCESS IMPROVEMENT</h3>
+                                <p class = 'info'>
+                                    <span class = 'info-item'>Emory Healthcare</span>
+                                    <span class = 'info-item'>Senior Design</span>
+                                    <span class = 'info-item'>2024</span>
+                                </p>
+                                <p>Improving patient processing rates by optimizing physician and patient scheduling processes.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class = 'timeline-line'></div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>ALZHEIMER'S DISEASE DETECTION ALGORITHM</h3>
+                                <p class="info">
+                                    <span class="info-item">Georgia Tech</span>
+                                    <span class="info-item">Machine Learning</span>
+                                    <span class="info-item">2024</span>
+                                </p>
+                                <p>Developed holistic machine learning models to accurately detect Alzheimer's presence in patient brain scans.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class = 'timeline-line'></div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>DATA-DRIVEN COVID-19 VACCINE DEVELOPMENT ACCELERATION</h3>
+                                <p class="info">
+                                    <span class="info-item">Georgia Tech</span>
+                                    <span class="info-item">Decision & Data Analytics</span>
+                                    <span class="info-item">2024</span>
+                                </p>
+                                <p>Designed program to confidently determine areas of high future disease incidence rates to accelerate vaccine development efforts.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class = 'timeline-line'></div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>SPORTS DATA CONSULTATION PROJECT</h3>
+                                <p class="info">
+                                    <span class="info-item">Georgia Tech</span>
+                                    <span class="info-item">Data Input/Manipulation</span>
+                                    <span class="info-item">2021</span>
+                                </p>
+                                <p>Placed 1st (out of over 200 students) by applying Python/SQL knowledge to produce premium tennis insights & recommendations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+        <!-- Skills Section -->
+        <section class = 'skills'>
+            <h2>Skills</h2>
+            <div class = 'timeline'>
+                <div class = 'timeline-item'>
+                    <div class="timeline-square"></div>
+                    <div class = 'timeline-content'>
+                        <h3>TECHNICAL</h3>
+                        <div class="wrap-items">
+                            <span class="info-item">Python</span>
+                            <span class="info-item">R</span>
+                            <span class="info-item">SQL</span>
+                            <span class="info-item">Microsoft Excel</span>
+                            <span class="info-item">Microsoft Word</span>
+                            <span class="info-item">Microsoft PowerPoint</span>
+                            <span class="info-item">Java</span>
+                            <span class="info-item">JavaScript</span>
+                            <span class="info-item">C#</span>
+                            <span class="info-item">Gurobi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class = 'timeline-item'>
+                    <div class="timeline-square"></div>
+                    <div class = 'timeline-content'>
+                        <h3>NON-TECHNICAL</h3>
+                        <div class="wrap-items">
+                            <span class="info-item">Business Consulting</span>
+                            <span class="info-item">Management Consulting</span>
+                            <span class="info-item">Data Analytics</span>
+                            <span class="info-item">Team Leadership</span>
+                            <span class="info-item">Root-Cause Analysis</span>
+                            <span class="info-item">Product Management</span>
+                            <span class="info-item">Change Acceleration</span>
+                            <span class="info-item">Strategic Planning</span>
+                            <span class="info-item">Agile</span>
+                            <span class="info-item">Business Systems Analysis</span>
+                            <span class="info-item">Client Communication</span>
+                            <span class="info-item">Current State Assessment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section class = 'service'>
+            <h2>Service</h2>
+            <div class = 'timeline'>
+                <div class = 'timeline-item'>
+                    <div class = 'timeline-line'></div>
+                    <div class = 'timeline-dot'></div>
+                    <div class = 'timeline-content'>
+                        <h3>STATE LIEUTENANT GOVERNOR</h3>
+                        <p class = 'info'>
+                            <span class = 'info-item'>Circle K International</span>
+                            <span class = 'info-item'>Georgia District</span>
+                            <span class = 'info-item'>April 2022 - Present</span>
+                        </p>
+                        <ul>
+                            <li>Managed 5 collegiate volunteering clubs across Georgia (Emory-Oxford, UGA, KSU, GSU Perimeter, Reinhardt</li>
+                        </ul>
+                        <ul>
+                            <li>Boosted division membership by 21% and expanded club networks by running 3 service events</li>
+                        </ul>
+                        <ul>
+                            <li>Led 6 state conventions, 2 club officer training sessions, & 6 home club meetings</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class = 'timeline-item'>
+                    <div class = 'timeline-line'></div>
+                    <div class = 'timeline-dot'></div>
+                    <div class = 'timeline-content'>
+                        <h3>GEORGIA TECH WEBMASTER</h3>
+                        <p class = 'info'>
+                            <span class = 'info-item'>Circle K International</span>
+                            <span class = 'info-item'>Georgia Tech</span>
+                            <span class = 'info-item'>August 2021 - May 2022</span>
+                        </p>
+                        <ul>
+                            <li>Developed brand-new club website to drive membership, promote service events, and provide club information (site is still active)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section class = 'awards'>
+            <h2>Awards</h2>
+            <div class = 'timeline'>
+                <div class = 'timeline-item'>
+                    <div class="timeline-square"></div>
+                    <div class = 'timeline-content'>
+                        <h3>MOST DISTINGUISHED MEMBER OF THE YEAR</h3>
+                        <p class = 'info'>
+                            <span class = 'info-item'>Circle K International</span>
+                            <span class = 'info-item'>Georgia District</span>
+                            <span class = 'info-item'>2022</span>
+                        </p>
+                        <p>Awarded title among 195 service candidates due to outstanding service commitments, convention involvements, & club dedications.</p>
+                    </div>
+                </div>
+                <div class = 'timeline-item'>
+                    <div class="timeline-square"></div>
+                    <div class = 'timeline-content'>
+                        <h3>$10,000 JIM CASEY SCHOLARSHIP</h3>
+                        <p class = 'info'>
+                            <span class = 'info-item'>National Merit Scholarship Corporation / UPS</span>
+                            <span class = 'info-item'>2021</span>
+                        </p>
+                        <p>Awarded scholarship based on holistic academic rigors, extracurricular accomplishments, & volunteering commitments in high school.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Save Resume Section -->
+        <section class = 'save-resume'>
+            <h2>Download Resume</h2>
+            <a href="images/Official_Resume_Tatikonda_Anirudh_7_27_2024.pdf" download="Your_Resume_Name.pdf" class="download-link">Click to view latest resume</a>
+        </section>
+        <p>v8.1.24. Last updated August 12, 2024.</p>
+            </div>
+        </div>        
+    </main>
+
+    <!-- ==== FOOTER ------------------------------ -->
+
+    <script src="counter.js"></script>
+
+    <footer>
+        <p>&copy; Ani Tatikonda 2024. All rights reserved.</p>
+        <div class="time-spent">
+            <p>Time Spent on Page: <span id="timeSpent">0m 0s</span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
