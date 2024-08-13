@@ -1,12 +1,82 @@
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin-left: 20px; /* Add margin to the left side of text */
+    margin-right: 20px; /* Add margin to the right side of text */
+}
+
+/* ==== GENERAL HEADER ------------------------------ */
+
+header {
+    /* background-image: url('images/black-paper.png'); */
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 0.75em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Add space between the two divs */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-left {
+     display: flex;
+     align-items: center;
+}
+
+header img {
+    width: 45px;
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    font-size: 2.3em;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the far right */
+    margin-bottom: 5px;
+}
+
+.header-right p {
+    margin-bottom: 5px; /* Adjust the margin-bottom value to reduce spacing */
+}
+
+/* ==== NAV BAR ------------------------------ */
+
 nav {
     background-image: url('images/gold-4.png');
-    background-color: #ededed;
+    background-color: #eed492;
     overflow: hidden;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     overflow-x: hidden;
     position: sticky;
+    padding-left: 20px;
 }
 
 nav a {
@@ -16,13 +86,11 @@ nav a {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px; /* Previously was 14px */
     font-weight: bold;
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-nav a:hover {
-    background-color: rgba(215, 220, 222, 0.5); /* Transparent hover color */
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 nav a img {
@@ -34,6 +102,48 @@ nav a img {
 nav a:hover {
     background-color: #cad4d8;
 }
+
+nav a.active {
+    border: 2.5px solid #000; /* Black border */
+    padding: 5px 10px; /* Add padding to create space between text and border */
+    border-radius: 4px; /* Optional: Rounded corners for the border */
+    color: #000; /* Optional: Change the text color */
+    font-weight: bold; /* Optional: Make the text bold */
+    background-color: #eed492; /* Optional: Background color to highlight the link */
+    margin-top: 6px; /* Adjust as needed */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* ==== SOCIALS ------------------------------ */
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-icons p {
+    margin: 5px 0;
+    color: #eed492;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.social-icons p:hover {
+    text-decoration: underline;
+}
+
+.social-icons p img.social-icon {
+    width: 20px; /* Adjust the size as needed */
+    height: auto;
+    margin-left: 12px;
+}
+
+/* ==== HEADER SEARCH BAR ------------------------------ */
 
 .result-icon {
     width: 20px;
@@ -62,11 +172,21 @@ nav a:hover {
     margin-right: 5px;
     border: none;
     border-radius: 3px;
+    background-color: #333;
+    color: #eed492;
+    font-size: 14px;
+    padding-left: 10px; /* Hard coded */
+}
+
+.search-container input[type = 'text']::placeholder {
+    color: #eed492;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 1;
 }
 
 .search-container button {
-    padding: 5px 10px;
-    background-color: #333;
+    padding: 5px 10px; /* Hard coded, previously 5px 10px */
+    background-color: #1d1d1d; /* previously #333 */
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -82,7 +202,7 @@ nav a:hover {
     border-radius: 5px;
     padding: 1em; /* Previously 15px */
     margin-top: 20px;
-    background-color: #f9f9f9;
+    background-color: #eed492;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
 
@@ -102,6 +222,9 @@ nav a:hover {
 .search-results h2 {
     margin-top: 0px;
     margin-bottom: 10px;
+    background-color: black;
+    color: #eed492;
+    font-size: 16px;
 }
 
 .search-results ul {
@@ -117,42 +240,69 @@ nav a:hover {
     display: inline;
     vertical-align: middle;
     margin: 0;
+    color: black;
+    font-size: 16px;
+}
+
+.search-results p {
+    color: black;
+    font-size: 14px;
 }
 
 .search-button, .clear-button {
     padding: 5px 10px; /* Set padding for the button */
     margin-top: 20px; /* Add margin to the top of the button */
-    background-color: #333; /* Set background color */
-    color: #fff; /* Set text color */
+    background-color: #000; /* Set background color */
+    color: #eed492; /* Set text color */
     border: none; /* Remove border */
     border-radius: 3px; /* Add border radius */
     cursor: pointer; /* Set cursor to pointer */
     position: absolute; /* Set position to absolute for positioning the button */
     bottom: 10px; /* Set distance from the bottom */
     right: 10px; /* Set distance from the right */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .search-button:hover, .clear-button:hover {
-    background-color: #fff;
+    background-color: #333;
 }
+
+.search-icon {
+    width: 13px;
+    height: 13px;
+}
+
+/* ==== MAIN TEXT ------------------------------ */
 
 main {
     padding: 1em;
     position: relative;
     width: 100%;
+    color: #E4E4E0;
 }
 
+/* ==== FOOTER ------------------------------ */
+
 footer {
-    background-image: url('images/black.png');
-    background-color: #333;
-    color: #fff;
+    background-color: #000;
+    color: #eed492;
     text-align: center;
-    padding: 0em;
+    /* padding: 1em 0; /* Adjust padding to accommodate new content */
     position: relative;
     bottom: 0;
     width: 100%;
     overflow-x: hidden;
 }
+
+footer p {
+    font-size: 14px; /* Ensure that paragraphs within the footer also use 13px font size */
+}
+
+footer .time-spent p {
+    font-size: 14px; /* Set the font size for the time-spent paragraph */
+}
+
+/* ==== COUNTER ------------------------------ */
 
 .visitor-counter {
     text-align: center;
@@ -161,111 +311,45 @@ footer {
     color: #333;
 }
 
-.social-icons {
+.time-spent {
+    margin-top: 10px; /* Adjust margin if needed */
+    font-size: 12px;
+    color: #eed492; /* Ensure the text color is readable */
+}
+
+/* ==== IMAGE BACKGROUND (HOME PAGE CUSTOMIZATION) ------------------------ */
+
+.image-background {
+    background-image: url('images/black-paper-v.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1em;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    justify-content: center; /* Vertically centers the content */
+    align-items: center; /* Horizontally centers the content */
+    height: 80vh;
+    text-align: center; /* Centers text inside each element */
 }
 
-.social-icons p {
-    margin: 5px 0;
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.social-icons p:hover {
-    text-decoration: underline;
-}
-
-.social-icons p img.social-icon {
-    width: 20px; /* Adjust the size as needed */
-    height: auto;
-    margin-right: 8px;
-}
-/* <img src="images/leaf-2.png" alt="Custom Icon"> */
-/* ^ above is the code for the image next to "Ani Tatikonda's Portfolio" in the header */
-
-.hero-image {
-    width: 100%;
-    height: 600px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-}
-
-.hero-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-size: 2em;
+.large-header {
+    font-size: 5em; /* Adjust size as needed */
+    color: #eed492; /* Example color for the large header */
     font-family: 'Montserrat', sans-serif;
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    width: 100%; /* Ensure the text container fills the width */
-    padding: 0 20px; /* Optional: Add padding to prevent text from touching edges */
-    box-sizing: border-box; /* Make padding and width work together */
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-.hero-text h1 {
-    font-family: 'Architects Daughter'; /* Example of a different font for the hero section */
-    font-size: 3em; /* Adjust as needed */
-    color: white;
-    margin: 0;
+.medium-header {
+    font-size: 2.5em; /* Adjust size as needed */
+    color: #fff; /* Example color for the smaller header */
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 25px;
 }
 
-.hero-text p {
-    margin: 10px 0 0 0;
-    font-size: 1.2em; /* Adjust as needed */
-}
-
-/* xxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxx */
-
-@media (max-width: 768px) {
-    /* Styles for devices with a width up to 768px */
-    .header-content {
-        flex-direction: column;
-    }
-    .hero-text {
-        font-size: 1.5em;
-    }
-}
-
-.container {
-    width: 100%;
-    padding: 20px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.mobile-nav {
-    display: none;
-}
-.menu-toggle {
-    display: block;
-}
-@media (max-width: 768px) {
-    .mobile-nav {
-        display: block;
-    }
-}
-
-button, a {
-    padding: 10px 15px;
-    font-size: 1em;
-    border-radius: 5px;
+.small-text {
+    font-size: 1.5em; /* Adjust size as needed */
+    color: #eed492; /* Example color for the text */
+    font-family: 'Montserrat', sans-serif;
 }

@@ -76,6 +76,7 @@ nav {
     background-position: center;
     overflow-x: hidden;
     position: sticky;
+    padding-left: 20px;
 }
 
 nav a {
@@ -88,6 +89,8 @@ nav a {
     font-size: 16px; /* Previously was 14px */
     font-weight: bold;
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 nav a img {
@@ -108,6 +111,8 @@ nav a.active {
     font-weight: bold; /* Optional: Make the text bold */
     background-color: #eed492; /* Optional: Background color to highlight the link */
     margin-top: 6px; /* Adjust as needed */
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 /* ==== SOCIALS ------------------------------ */
@@ -169,6 +174,8 @@ nav a.active {
     border-radius: 3px;
     background-color: #333;
     color: #eed492;
+    font-size: 14px;
+    padding-left: 10px; /* Hard coded */
 }
 
 .search-container input[type = 'text']::placeholder {
@@ -261,8 +268,8 @@ nav a.active {
 }
 
 .search-icon {
-    width: 12px;
-    height: 12px;
+    width: 13px;
+    height: 13px;
 }
 
 /* ==== MAIN TEXT ------------------------------ */
@@ -288,11 +295,11 @@ footer {
 }
 
 footer p {
-    font-size: 13.5px; /* Ensure that paragraphs within the footer also use 13px font size */
+    font-size: 14px; /* Ensure that paragraphs within the footer also use 13px font size */
 }
 
 footer .time-spent p {
-    font-size: 13.5px; /* Set the font size for the time-spent paragraph */
+    font-size: 14px; /* Set the font size for the time-spent paragraph */
 }
 
 /* ==== COUNTER ------------------------------ */
@@ -308,4 +315,14 @@ footer .time-spent p {
     margin-top: 10px; /* Adjust margin if needed */
     font-size: 12px;
     color: #eed492; /* Ensure the text color is readable */
+}
+
+/* ==== IMAGE BACKGROUND ------------------------ */
+
+.image-background {
+    background-image: url('images/black-paper-v.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1em;
 }
