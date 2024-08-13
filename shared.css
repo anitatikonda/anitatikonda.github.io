@@ -16,7 +16,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 header {
     /* background-image: url('images/black-paper.png'); */
-    background-image: url('images/black-paper.png');
     background-color: #000000;
     color: #fff;
     text-align: center;
@@ -278,7 +277,6 @@ main {
 /* ==== FOOTER ------------------------------ */
 
 footer {
-    background-image: url('images/black-paper.png');
     background-color: #000;
     color: #eed492;
     text-align: center;
