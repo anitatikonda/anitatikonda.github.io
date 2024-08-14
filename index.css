@@ -321,6 +321,7 @@ footer .time-spent p {
 
 .image-background {
     background-image: url('images/black-paper-v.png');
+    background-color: #333;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -345,11 +346,11 @@ footer .time-spent p {
     font-size: 2.5em; /* Adjust size as needed */
     color: #fff; /* Example color for the smaller header */
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .small-text {
-    font-size: 1.5em; /* Adjust size as needed */
+    font-size: 1.75em; /* Adjust size as needed */
     color: #eed492; /* Example color for the text */
     font-family: 'Montserrat', sans-serif;
 }

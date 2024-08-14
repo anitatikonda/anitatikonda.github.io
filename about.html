@@ -7,7 +7,7 @@
     <title>Ani Tatikonda</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon-18.ico" type="image/x-icon">
-    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="about.css">
 </head>
 
 <body>
@@ -40,12 +40,12 @@
     <!-- ==== NAV BAR ------------------------------ -->
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="resume.html">Resume</a>
-        <a href="projects.html">Projects</a>
-        <a href="spotlight.html">Spotlight</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" id = 'home-link'>Home</a>
+        <a href="about.html" id = 'about-link'>About</a>
+        <a href="resume.html" id = 'resume-link'>Resume</a>
+        <a href="projects.html" id = 'projects-link'>Projects</a>
+        <a href="spotlight.html" id = 'spotlight-link'>Spotlight</a>
+        <a href="contact.html" id = 'contact-link'>Contact</a>
 
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Search...">
@@ -57,9 +57,250 @@
 
     <!-- ==== TEXT ------------------------------ -->
 
-    <main class = 'image-background'>
-        <p>Currently in progress. Last updated August 13, 2024.</p>
-    </main>
+    <div class="image-background">
+        <div class = 'project-header'>
+            <h2>I'm Ani Tatikonda</h2>
+        </div>
+        <div class="project-details">
+
+            <div class="about-section">
+                <div class="photo-container">
+                    <img src="images/myself-circle-4.png" alt="Your Photo">
+                </div>
+                <div class="info-container">
+                    <div class="description">
+                        <p>Your description goes here...</p>
+                    </div>
+                    <div class="important-info">
+                        <ul>
+                            <li>Education: Your Education</li>
+                            <li>Phone: Your Phone Number</li>
+                            <li>Email: Your Email</li>
+                            <!-- Add more important info as needed -->
+                        </ul>
+                    </div>
+                    <div class="additional-text">
+                        <p>Additional text goes here...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'project-header'>
+                <h3>Major Developments</h3>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline">
+                    <img src="images/left-arrow.png" alt="Left Arrow" class="timeline-left-image">
+                    <img src="images/right-arrow.png" alt="Right Arrow" class="timeline-right-image">
+                    <div class="timeline-point">
+                        <h4>May 2022</h4>
+                        <p>Embarked on study abroad in Dublin, Ireland</p>
+                    </div>
+                    <div class="timeline-point">
+                        <h4>January 2023</h4>
+                        <p>Began work with United Airlines</p>
+                    </div>
+                    <div class="timeline-point">
+                        <h4>August 2023</h4>
+                        <p>Declared MESA Minor at Georgia Tech</p>
+                    </div>
+                    <div class="timeline-point">
+                        <h4>May 2024</h4>
+                        <p>Began work with CapTech Consulting</p>
+                    </div>
+                    <!-- Add more timeline points as needed -->
+                </div>
+            </div>
+
+            <p>Brief description of the project, including key features, objectives, and results. Brief description of the project, including key features, objectives, and results. Brief description of the project, including key features, objectives, and results. Brief description of the project, including key features, objectives, and results. Brief description of the project, including key features, objectives, and results.</p>
+            
+            <!-- Embedded YouTube Video -->
+            <!-- <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Q_vww6--aVw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> -->
+            
+            <div class = 'project-header'>
+                <h3>Programming Skills</h3>
+            </div>
+
+            <!-- Skills Snapshots -->
+            <div class = 'skill-container'>
+                <div class="skill-snapshot">
+                    <div class="skill-icon">
+                        <img src="images/Python.png" alt="Skill Icon">
+                    </div>
+                    <div class="skill-details">
+                        <p class="skill-name">Python</p>
+                        <div class="proficiency-bar">
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                        </div>
+                        <p class="proficiency-level">Expert</p>
+                    </div>
+                </div>
+                <div class="skill-snapshot">
+                    <div class="skill-icon">
+                        <img src="images/SQL-5.png" alt="Skill Icon">
+                    </div>
+                    <div class="skill-details">
+                        <p class="skill-name">SQL/MySQL</p>
+                        <div class="proficiency-bar">
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                        </div>
+                        <p class="proficiency-level">Expert</p>
+                    </div>
+                </div>
+                <div class="skill-snapshot">
+                    <div class="skill-icon">
+                        <img src="images/R.png" alt="Skill Icon">
+                    </div>
+                    <div class="skill-details">
+                        <p class="skill-name">R</p>
+                        <div class="proficiency-bar">
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                        </div>
+                        <p class="proficiency-level">Expert</p>
+                    </div>
+                </div>
+                <div class="skill-snapshot">
+                    <div class="skill-icon">
+                        <img src="images/Java.png" alt="Skill Icon">
+                    </div>
+                    <div class="skill-details">
+                        <p class="skill-name">Java</p>
+                        <div class="proficiency-bar">
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <p class="proficiency-level">Proficient</p>
+                    </div>
+                </div>
+                <div class="skill-snapshot">
+                    <div class="skill-icon">
+                        <img src="images/JavaScript.png" alt="Skill Icon">
+                    </div>
+                    <div class="skill-details">
+                        <p class="skill-name">JavaScript</p>
+                        <div class="proficiency-bar">
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <p class="proficiency-level">Proficient</p>
+                    </div>
+                </div>      
+                <div class="skill-snapshot">
+                    <div class="skill-icon">
+                        <img src="images/HTML-6.png" alt="Skill Icon">
+                    </div>
+                    <div class="skill-details">
+                        <p class="skill-name">HTML/CSS</p>
+                        <div class="proficiency-bar">
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                            <div class="bar colored"></div>
+                        </div>
+                        <p class="proficiency-level">Expert</p>
+                    </div>
+                </div> 
+            </div>
+
+            <div class = 'project-header'>
+                <h3>Professional Skills</h3>
+            </div>
+
+            <div class="four-column-container">
+                <div class="column-box">
+                    <img src="images/consultant.png" alt="Example 1">
+                    <p>Business Consulting</p>
+                </div>
+                <div class="column-box">
+                    <img src="images/leadership.png" alt="Example 2">
+                    <p>Team Leadership</p>
+                </div>
+                <div class="column-box">
+                    <img src="images/data.png" alt="Example 3">
+                    <p>Data Analytics</p>
+                </div>
+                <div class="column-box">
+                    <img src="images/rca.png" alt="Example 3">
+                    <p>Root Cause Analysis</p>
+                </div>
+                <div class="column-box">
+                    <img src="images/agile.png" alt="Example 3">
+                    <p>Agile</p>
+                </div>
+                <div class="column-box">
+                    <img src="images/prod-management.png" alt="Example 3">
+                    <p>Product Management</p>
+                </div>
+                <div class="column-box">
+                    <img src="images/bsa-2.png" alt="Example 3">
+                    <p>Business Systems Analysis</p>
+                </div>
+                <div class="column-box">
+                    <img src="images/change-accel.png" alt="Example 3">
+                    <p>Change Acceleration</p>
+                </div>
+                <div class="column-box">
+                    <img src="images/ms-e.png" alt="Example 1">
+                    <p>Microsoft Excel</p>
+                </div>
+                <div class="column-box">
+                    <img src="images/ms-w.png" alt="Example 2">
+                    <p>Microsoft Word</p>
+                </div>
+                <div class="column-box">
+                    <img src="images/ms-v.png" alt="Example 3">
+                    <p>Microsoft Visio</p>
+                </div>
+                <div class="column-box">
+                    <img src="images/ms-pp.png" alt="Example 3">
+                    <p>Microsoft PowerPoint</p>
+                </div>
+                <!-- Repeat for other boxes -->
+            </div>
+             
+            <!-- Slideshow implementation -->
+            <div class="slideshow-container">
+                <img class="slide" src="images/image1.jpg" alt="Slide 1">
+                <img class="slide" src="images/image2.jpg" alt="Slide 2">
+                <img class="slide" src="images/image3.jpg" alt="Slide 3">
+                <!-- Add more images as needed -->
+            
+                <button class="nav-button prev" onclick="prevSlide()">&#10094;</button>
+                <button class="nav-button next" onclick="nextSlide()">&#10095;</button>
+            </div>
+            
+            <!-- Sections with headings -->
+            <div class="project-sections">
+                <section class="section">
+                    <h4>Component 1</h4>
+                    <p>Details about component 1.</p>
+                    <img src="path/to/your-image1.jpg" alt="Visual for Component 1">
+                </section>
+                <section class="section">
+                    <h4>Component 2</h4>
+                    <p>Details about component 2.</p>
+                    <img src="path/to/your-image2.jpg" alt="Visual for Component 2">
+                </section>
+                <!-- Add more sections as needed -->
+            </div>
+        </div>
+    </div>
 
     <!-- ==== FOOTER ------------------------------ -->
 

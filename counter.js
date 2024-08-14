@@ -1,3 +1,5 @@
+/* Counter */
+
 var startTime = new Date().getTime(); // Get the current time when the page is loaded
 
 setInterval(function() {
@@ -9,6 +11,8 @@ setInterval(function() {
         document.getElementById("timeSpent").innerText = Math.floor(timeSpent / 60).toFixed(0) + "m " + (timeSpent % 60).toFixed(0) + "s"; // Display the time spent in min + sec
     }
 }, 1000); // Update the displayed time every 1 second
+
+/* Search */
 
 function search() {
     var input = document.getElementById("searchInput").value.toLowerCase();
@@ -87,6 +91,7 @@ document.getElementById("searchInput").addEventListener("keypress", function(eve
     }
 });
 
+/* Socials */
 
 document.getElementById("linkedin-icon").onclick = function() {
     window.open("https://www.linkedin.com/in/ani-t", "_blank");
@@ -100,12 +105,15 @@ document.getElementById("email-icon").onclick = function() {
     window.location.href = "mailto:anitatikonda@gmail.com";
 };
 
+/* Active nav bar section */
+
 document.addEventListener("DOMContentLoaded", function() {
-    const currentPage = window.location.pathname;
+    const currentPage = window.location.pathname === '/' ? '/index.html' : window.location.pathname;
     const navLinks = document.querySelectorAll("nav a");
 
     navLinks.forEach(link => {
-        if (link.href.includes(currentPage)) {
+        const linkPath = new URL(link.href).pathname;
+        if (linkPath === currentPage) {
             link.classList.add("active");
         }
     });
