@@ -386,11 +386,12 @@ h2 {
 
 .project-details h3 {
     font-size: 20px !important;
-    color: #eed492; /* Gold color */
+    color: #000; /* Gold color */
+    background-color: #eed492;
     padding: 3px 10px;
     border-radius: 0;
     margin: 0;
-    margin-top: 25px;
+    margin-top: 25px; /* Previously was 25px; section header spacing */
     margin-bottom: 35px;
 }
 
@@ -592,6 +593,8 @@ section {
     display: flex;
     padding: 20px;
     justify-content: center;
+    margin-left: 12%;
+    margin-right: 12%;
 }
 
 .photo-container {
@@ -601,32 +604,152 @@ section {
 
 .photo-container img {
     /* max-width: 100%; */
-    height: 250px;
-    width: 250px;
-    border-radius: 50%; /* Makes the image circular */
+    height: 275px; /* Previously 250px x 250px */
+    width: 275px;
+    /* border-radius: 50%; /* Makes the image circular */
     display: block;
+    /* transform: translateY(15%); /* New addition! (hard-coded) */
 }
 
-/* .info-container {
+.info-container {
     /* flex: 2; /* Takes up 2/3 of the space */
-/* } */
+    margin-top: -30px;
+}
 
-.description {
-    margin-bottom: 20px; /* Adds space below the description */
+p.description {
+    margin-bottom: 30px; /* Adds space below the description */
+    margin-left: 30px;
+    font-size: 20px;
+    text-align: left;
+    font-style: italic;
+    color: #eed492;
+}
+
+.important-info {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
 }
 
 .important-info ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 48%; /* Two columns */
 }
 
 .important-info ul li {
-    margin-bottom: 10px; /* Space between each info item */
+    margin-bottom: 20px; /* Space between each list item */
 }
+
+.important-info ul li:last-child {
+    margin-bottom: 0; /* Remove the margin for the last list item */
+}
+
+.bullet-header {
+    display: flex;
+    align-items: center;
+}
+
+.bullet-header img {
+    width: 14px; /* Customize the size of the bullet image */
+    height: auto;
+    margin-right: 10px; /* Space between bullet image and header */
+}
+
+.bullet-header h4 {
+    margin: 0; /* Remove default margin */
+    font-size: 18px;
+    color: #eed492;
+}
+
+.important-info ul li p {
+    margin-top: 15px; /* Space between header and text */
+    margin-left: 30px; /* Indentation for text under header */
+    font-size: 16px;
+    text-align: left;
+}
+
 
 .additional-text {
     margin-top: 20px;
+}
+
+/* ==== EDUCATION SECTION ------------------------- */
+
+/* Wraps the cards and controls layout */
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styling for card */
+.education-card {
+    width: 47%; /* Adjust to fit two columns with space in between */
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    box-sizing: border-box;
+    margin: 0 1% 20px 1%;
+}
+
+/* Allows image to take up full width of the card */
+.education-image-gt img {
+    /* width: 50%; */
+    border-radius: 5px 5px 0 0; /* Rounded corners at the top */
+    height: 120px;
+    width: 120px;
+    padding-top: 20px;
+}
+
+.education-image-lambert img {
+    /* width: 50%; */
+    border-radius: 5px 5px 0 0; /* Rounded corners at the top */
+    height: 120px;
+    width: 200px;
+    padding-top: 20px;
+}
+
+.education-details {
+    padding: 15px;
+}
+
+.institute-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: white !important;
+    margin-bottom: 10px;
+}
+
+.education-points {
+    margin-top: 10px;
+    /* padding-left: 0;
+    /* padding-left: 20px; /* Indent bullet points */
+    font-size: 16px;
+    text-align: left;
+    list-style-type: none;
+}
+
+.education-points li {
+    margin-bottom: 10px;
+    color: white; /* Gold color for the bullet points */
+    position: relative;
+    padding-left: 30px; /* Space for the bullet */
+}
+
+.education-points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(50%);
+    width: 10px; /* Adjust this to your desired bullet size */
+    height: 10px; /* Adjust this to your desired bullet size */
+    background-image: url('images/square.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* ==== TIMELINE SECTION ----------------------- */
@@ -663,6 +786,7 @@ section {
 .timeline-point h4 {
     font-size: 18px;
     margin-bottom: 40px; /* Previously 50px */
+    color: #eed492;
 }
 
 .timeline-point p {
@@ -723,6 +847,58 @@ section {
     .timeline-point p {
         margin-top: 15px; /* Adjust spacing for smaller screens */
     }
+}
+
+/* ==== TESTIMONIALS SLIDE SHOW ------------------------- */
+
+/* Container to center the slideshow and set dimensions */
+.testimonial-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden; /* Hide overflow to ensure smooth sliding */
+    width: 100%;
+}
+
+/* Slideshow wrapper to hold the slides */
+.testimonial-slideshow {
+    display: flex; /* Arrange slides in a row */
+    transition: transform 1.5s ease; /* Smooth transition for sliding effect */
+    width: 100%;
+}
+
+/* Style individual slides */
+.testimonial-slide {
+    flex: 1 0 100%; /* Full width for each slide */
+    box-sizing: border-box; /* Ensure padding/margin is included in the width */
+}
+
+/* Style the image to be responsive */
+.testimonial-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Dots container */
+.testimonial-dots {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+/* Dots styles */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #333;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot {
+    background-color: #eed492;
 }
 
 /* Archives (timeline ends are lines instead of arrows) */
