@@ -854,7 +854,7 @@ p.description {
 /* Container to center the slideshow and set dimensions */
 .testimonial-container {
     position: relative;
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
     overflow: hidden; /* Hide overflow to ensure smooth sliding */
     width: 100%;
