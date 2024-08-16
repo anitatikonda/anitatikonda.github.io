@@ -296,12 +296,10 @@ footer {
 
 footer p {
     font-size: 14px; /* Ensure that paragraphs within the footer also use 13px font size */
-    color: #eed492;
 }
 
 footer .time-spent p {
     font-size: 14px; /* Set the font size for the time-spent paragraph */
-    color: #eed492;
 }
 
 /* ==== COUNTER ------------------------------ */
@@ -329,23 +327,6 @@ footer .time-spent p {
     background-position: center;
     padding: 1em;
 }
-
-p {
-    color: white;
-}
-
-h2 {
-    background-color: #eed492; /* Black background */
-    color: #000; /* Gold text color */
-    padding: 3px 10px; /* Reduced padding for a smaller box */
-    margin: 0; /* Remove default margins */
-    border-radius: 0; /* Sharp corners */
-    display: inline-block; /* Make the background only as wide as the text */
-    /* margin-left: 20px; */
-    font-size: 20px;
-}
-
-/* ==== CALENDAR IMPLEMENTATION (MK II) -------------- */
 
 /* ==== CURRENTLY IN PROGRESS CODE (BORRWED FROM SPOTLIGHT.CSS) ------------- */
 
