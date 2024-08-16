@@ -1,0 +1,348 @@
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin-left: 20px; /* Add margin to the left side of text */
+    margin-right: 20px; /* Add margin to the right side of text */
+}
+
+/* ==== GENERAL HEADER ------------------------------ */
+
+header {
+    /* background-image: url('images/black-paper.png'); */
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 0.75em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Add space between the two divs */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-left {
+     display: flex;
+     align-items: center;
+}
+
+header img {
+    width: 45px;
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    font-size: 2.3em;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the far right */
+    margin-bottom: 5px;
+}
+
+.header-right p {
+    margin-bottom: 5px; /* Adjust the margin-bottom value to reduce spacing */
+}
+
+/* ==== NAV BAR ------------------------------ */
+
+nav {
+    background-image: url('images/gold-4.png');
+    background-color: #eed492;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+    position: sticky;
+    padding-left: 20px;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 16px; /* Previously was 14px */
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+nav a img {
+    width: 15px; /* Reduced width of the custom icon/image */
+    height: auto;
+    margin-right: 5px; /* Add some spacing between the icon/image and text */
+}
+
+nav a:hover {
+    background-color: #cad4d8;
+}
+
+nav a.active {
+    border: 2.5px solid #000; /* Black border */
+    padding: 5px 10px; /* Add padding to create space between text and border */
+    border-radius: 4px; /* Optional: Rounded corners for the border */
+    color: #000; /* Optional: Change the text color */
+    font-weight: bold; /* Optional: Make the text bold */
+    background-color: #eed492; /* Optional: Background color to highlight the link */
+    margin-top: 6px; /* Adjust as needed */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* ==== SOCIALS ------------------------------ */
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-icons p {
+    margin: 5px 0;
+    color: #eed492;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.social-icons p:hover {
+    text-decoration: underline;
+}
+
+.social-icons p img.social-icon {
+    width: 20px; /* Adjust the size as needed */
+    height: auto;
+    margin-left: 12px;
+}
+
+/* ==== HEADER SEARCH BAR ------------------------------ */
+
+.result-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.search-container {
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+#search-results-container {
+    position: absolute;
+    top: 0; /* Adjust as needed */
+    left: 0;
+    right: 0;
+    z-index: 1001; /* Make sure it's above the hero image */
+}
+
+.search-container input[type=text] {
+    padding: 5px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: #333;
+    color: #eed492;
+    font-size: 14px;
+    padding-left: 10px; /* Hard coded */
+}
+
+.search-container input[type = 'text']::placeholder {
+    color: #eed492;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 1;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    background-color: #1d1d1d; /* previously #333 */
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #555;
+}
+
+.search-results {
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 1em; /* Previously 15px */
+    margin-top: 20px;
+    background-color: #eed492;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style adjustments for the search results */
+.search-results {
+    position: relative; /* Ensure it's positioned within its container */
+    z-index: 1002; /* Ensure it's on top */
+    margin: 20px auto; /* Center and add spacing as needed */
+    max-width: 800px; /* Adjust width as needed */
+}
+
+.search-results h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: #eed492;
+    font-size: 16px;
+}
+
+.search-results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.search-results li {
+    margin-bottom: 15px;
+}
+
+.search-results h3 {
+    display: inline;
+    vertical-align: middle;
+    margin: 0;
+    color: black;
+    font-size: 16px;
+}
+
+.search-results p {
+    color: black;
+    font-size: 14px;
+}
+
+.search-button, .clear-button {
+    padding: 5px 10px; /* Set padding for the button */
+    margin-top: 20px; /* Add margin to the top of the button */
+    background-color: #000; /* Set background color */
+    color: #eed492; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 3px; /* Add border radius */
+    cursor: pointer; /* Set cursor to pointer */
+    position: absolute; /* Set position to absolute for positioning the button */
+    bottom: 10px; /* Set distance from the bottom */
+    right: 10px; /* Set distance from the right */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search-button:hover, .clear-button:hover {
+    background-color: #333;
+}
+
+.search-icon {
+    width: 13px;
+    height: 13px;
+}
+
+/* ==== MAIN TEXT ------------------------------ */
+
+main {
+    padding: 1em;
+    position: relative;
+    width: 100%;
+    color: #E4E4E0;
+}
+
+/* ==== FOOTER ------------------------------ */
+
+footer {
+    background-color: #000;
+    color: #eed492;
+    text-align: center;
+    /* padding: 1em 0; /* Adjust padding to accommodate new content */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+footer p {
+    font-size: 14px; /* Ensure that paragraphs within the footer also use 13px font size */
+    color: #eed492;
+}
+
+footer .time-spent p {
+    font-size: 14px; /* Set the font size for the time-spent paragraph */
+    color: #eed492;
+}
+
+/* ==== COUNTER ------------------------------ */
+
+.visitor-counter {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.time-spent {
+    margin-top: 10px; /* Adjust margin if needed */
+    font-size: 12px;
+    color: #eed492; /* Ensure the text color is readable */
+}
+
+/* ==== IMAGE BACKGROUND ------------------------ */
+
+.image-background {
+    background-image: url('images/black-paper-v.png');
+    background-color: #333;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1em;
+}
+
+p {
+    color: white;
+}
+
+h2 {
+    background-color: #eed492; /* Black background */
+    color: #000; /* Gold text color */
+    padding: 3px 10px; /* Reduced padding for a smaller box */
+    margin: 0; /* Remove default margins */
+    border-radius: 0; /* Sharp corners */
+    display: inline-block; /* Make the background only as wide as the text */
+    /* margin-left: 20px; */
+    font-size: 20px;
+}
+
+/* ==== CALENDAR IMPLEMENTATION (MK II) -------------- */

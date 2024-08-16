@@ -593,8 +593,8 @@ section {
     display: flex;
     padding: 20px;
     justify-content: center;
-    margin-left: 12%;
-    margin-right: 12%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .photo-container {

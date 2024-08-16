@@ -1,5 +1,3 @@
-/* Counter */
-
 var startTime = new Date().getTime(); // Get the current time when the page is loaded
 
 setInterval(function() {
@@ -12,16 +10,15 @@ setInterval(function() {
     }
 }, 1000); // Update the displayed time every 1 second
 
-/* Search */
-
 function search() {
     var input = document.getElementById("searchInput").value.toLowerCase();
     var articles = [
         { title: "Home", content: "Welcome to my portfolio website. This website contains my portfolio work across the years, starting at high school to the present.", icon: "images/icon-home-black.png" },
-        { title: "Education", content: "This section showcases my achievements and projects during my college and high school years. It includes academic achievements, extracurricular activities, and more.", icon: "images/icon-school-black.png" },
-        { title: "Resume", content: "This section contains my resume. It includes my contact information, education, study abroad experience, professional experiences, volunteering service, projects, skills, awards, and a downloadable version of the content.", icon: "images/icon-work-black.png" },
-        { title: "Projects", content: "In this section, you can explore my passion projects and personal projects. It includes descriptions, technologies used, and outcomes of each project.", icon: "images/icon-project-black.png" },
-        { title: "Spotlight", content: "In this section, you can see my most important project work, which is typically the most recent work that I've done.", icon: "images/icon-project-black.png" },
+        { title: "Lambert High School", content: "This section showcases my achievements and projects during my high school years. It includes academic achievements, extracurricular activities, and more.", icon: "images/icon-school-black.png" },
+        { title: "Georgia Institute of Technology", content: "In this section, you can find information about my time at Georgia Tech. It includes courses taken, projects completed, and other academic accomplishments.", icon: "images/icon-school-black.png" },
+        { title: "Work Experience", content: "This section details my professional experiences, internships, and jobs. It includes roles, responsibilities, achievements, and skills gained.", icon: "images/icon-work-black.png" },
+        { title: "Skills", content: "This section highlights my technical skills, soft skills, and other abilities. It includes programming languages, tools, technologies, and certifications.", icon: "images/icon-skills-black.png" },
+        { title: "Passion Projects", content: "In this section, you can explore my passion projects and personal projects. It includes descriptions, technologies used, and outcomes of each project.", icon: "images/icon-project-black.png" },
         { title: "Contact", content: "For more information on how to contact me, please see the Contact tab. You can reach out to me via email or phone for inquiries, collaborations, or any other questions.", icon: "images/icon-contact-black.png" }
     // Add more articles as needed
     ];
@@ -37,10 +34,9 @@ function search() {
 }
 
 function displayResults(results) {
-    var resultsContainer = document.getElementById("search-results-container");
-    var existingResults = document.querySelector(".search-results");
+    var existingResults = document.querySelector(".search-results")
     if (existingResults) {
-        existingResults.remove();
+        existingResults.remove()
     }
 
     var resultsDiv = document.createElement("div");
@@ -82,7 +78,8 @@ function displayResults(results) {
     });
     resultsDiv.appendChild(clearButton);
 
-    resultsContainer.appendChild(resultsDiv);
+    var mainContent = document.querySelector("main");
+    mainContent.insertBefore(resultsDiv, mainContent.firstChild);
 }
 
 document.getElementById("searchInput").addEventListener("keypress", function(event) {
@@ -91,29 +88,12 @@ document.getElementById("searchInput").addEventListener("keypress", function(eve
     }
 });
 
-/* Socials */
-
-document.getElementById("linkedin-icon").onclick = function() {
-    window.open("https://www.linkedin.com/in/ani-t", "_blank");
-};
-
-document.getElementById("github-icon").onclick = function() {
-    window.open("https://github.com/anitatikonda", "_blank");
-};
-
-document.getElementById("email-icon").onclick = function() {
-    window.location.href = "mailto:business@ani-tatikonda.com";
-};
-
-/* Active nav bar section */
-
 document.addEventListener("DOMContentLoaded", function() {
-    const currentPage = window.location.pathname === '/' ? '/index.html' : window.location.pathname;
+    const currentPage = window.location.pathname;
     const navLinks = document.querySelectorAll("nav a");
 
     navLinks.forEach(link => {
-        const linkPath = new URL(link.href).pathname;
-        if (linkPath === currentPage) {
+        if (link.href.includes(currentPage)) {
             link.classList.add("active");
         }
     });
