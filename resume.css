@@ -622,3 +622,14 @@ h4 {
 .download-link:hover {
     background-color: #cad4d8; /* Lighter background on hover */
 }
+
+/* ==== CIRCLE K WEBSITE LINK CSS (UNDER 'SERVICE & LEADERSHIP' SECTION IN HTML FILE) ----- */
+
+.active-link {
+    color: inherit; /* Keeps the original text color */
+    text-decoration: none; /* Removes underline */
+}
+
+.active-link:hover {
+    color: #eed492; /* Changes text color to gold on hover */
+}
